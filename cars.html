@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cars for Sale</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="cars.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script id="carTemplate" type="text/x-handlebars">
+      {{#each cars}}
+      <div class="listing">
+        <figure><img src="{{image}}"></figure>
+        <h2>{{make}} {{model}}</h2>
+        <p>Year: {{year}}</p>
+        <p>Price: {{price}}</p>
+        <a href="#">Buy</a>
+      </div>
+      {{/each}}
+    </script>
+    <script src="cars.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Buy Used Cars</h1>
+      <form id="filter">
+        <label for="make">Make</label>
+        <select name="make" id="make"><option value="null">All</option></select>
+        <label for="model">Model</label>
+        <select name="model" id="model"><option value="null">All</option></select>
+        <label for="price">Price</label>
+        <select name="price" id="price"><option value="null">Any</option></select>
+        <label for="year">Year</label>
+        <select name="year" id="year"><option value="null">Any</option></select>
+        <input type="submit" value="Filter">
+      </form>
+    </header>
+    <main>
+
+    </main>
+  </body>
+</html>
